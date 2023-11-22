@@ -1,5 +1,6 @@
 const store = require("./app/store");
 const { counterActions } = require("./features/counter/counterSlice");
+const { fetchPosts } = require("../rtk/features/post/postSlice");
 const {
   dynamicCounterActions,
 } = require("./features/dynamicCounter/dynamicCounterSlice");
@@ -11,4 +12,4 @@ store.subscribe(() => {
 });
 
 // disptach actions
-store.dispatch(counterActions.increment());
+store.dispatch(fetchPosts());
