@@ -1,0 +1,12 @@
+{
+  "name": "rtk-toolkit-with-vanilla-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "node-fetch": "2.6.1",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6"
+  }
+}
