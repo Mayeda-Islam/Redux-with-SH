@@ -13,13 +13,11 @@ const fetchMoreVideos = () => {
         query = query + `tags_like=${element}&`;
       }
     });
-  console.log(query, "line 16");
   tags && store.dispatch(fetchVideosArray(query));
 };
 
 store.subscribe(() => {
   const videoInfo = store.getState().videoObj?.loading;
-  console.log(videoInfo);
   if (!videoInfo) {
     fetchMoreVideos();
   }

@@ -20,7 +20,14 @@ const fetchVideosArray = createAsyncThunk(
   async (query) => {
     const response = await fetch(`http://localhost:9000/videos?${query}`);
     const posts = await response.json();
-    console.log(posts, "line 24");
+    posts.sort(function (a, b) {
+      const viewsA = parseFloat(a.views);
+      const viewsB = parseFloat(b.views);
+      console.log(viewsA, viewsB, "sort");
+
+      return viewsA - viewsB;
+    });
+    console.log(posts, "whol;w");
     return posts;
   }
 );
